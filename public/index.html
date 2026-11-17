@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DEMO PLANT PROJECT | Home</title>
+  <meta name="description" content="Demo Plant project dashboard home: bulletin board, daily verse and project at a glance.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="home">
+  <div id="site-header"></div>
+  <script src="/nav.js"></script>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-kicker" id="heroDate"></div>
+      <h1 class="hero-title" id="heroTitle">Welcome</h1>
+      <p class="hero-sub" id="heroSub">Welcome to the Demo Plant project dashboard. Merry Christmas to the whole team!</p>
+      <span class="xmas-chip" id="xmasChip" hidden></span>
+    </section>
+
+    <h2 class="section-title">Project at a glance</h2>
+    <section class="glance" id="glance"></section>
+
+    <section class="info-row">
+      <div class="safety-card" id="safetyCard">
+        <div class="safety-badge" aria-hidden="true">&#9888;&#65039;</div>
+        <div>
+          <div class="safety-label">Safety moment</div>
+          <p class="safety-text" id="safetyText">Loading...</p>
+          <div class="safety-topic" id="safetyTopic"></div>
+        </div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-label">Today's focus</div>
+        <ul class="focus-list" id="focusList"><li>Loading...</li></ul>
+      </div>
+    </section>
+
+    <section class="home-grid">
+      <div>
+        <h2 class="section-title">Company bulletin board</h2>
+        <div class="bulletin-tabs" id="bulletinTabs" role="tablist" aria-label="Bulletin groups" hidden></div>
+        <div class="carousel" id="carousel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Company bulletin board">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack"></div>
+            <button class="carousel-btn prev" id="prevBtn" type="button" aria-label="Previous announcement" hidden>&#8249;</button>
+            <button class="carousel-btn next" id="nextBtn" type="button" aria-label="Next announcement" hidden>&#8250;</button>
+          </div>
+          <div class="carousel-bar" id="carouselBar" hidden>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <div class="carousel-count" id="carouselCount"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-col">
+        <h2 class="section-title">Daily inspiration</h2>
+        <div class="verse-card flip-card" id="verseCard">
+          <div class="chips" id="inspoChips" role="tablist" aria-label="Choose a category"></div>
+          <blockquote class="verse-text" id="verseText">Loading...</blockquote>
+          <div>
+            <div class="verse-ref" id="verseRef"></div>
+            <button class="verse-btn" id="verseBtn" type="button">Show another</button>
+          </div>
+        </div>
+
+        <h2 class="section-title">Horoscope for today</h2>
+        <div class="verse-card horo-card flip-card" id="horoCard">
+          <div class="sign-grid" id="signGrid" role="radiogroup" aria-label="Choose your sign"></div>
+          <select id="signSelect" class="sr-only" aria-label="Your sign" tabindex="-1"></select>
+          <div class="horo-head" id="horoHead"></div>
+          <blockquote class="verse-text" id="horoText"></blockquote>
+          <div>
+            <div class="verse-ref" id="horoMeta"></div>
+            <div class="muted small">For fun and inspiration only.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">DEMO PLANT · Project Dashboard · sample data only</footer>
+  </main>
+
+  <script src="/themes.js"></script>
+  <script src="/home.js"></script>
+</body>
+</html>
